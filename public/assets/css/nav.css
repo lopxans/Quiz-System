@@ -1,0 +1,79 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Page wrapper to stick footer at the bottom */
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #422ddb;
+    padding: 15px 30px;
+    color: #fff;
+}
+
+/* Logo section */
+.navbar__logo a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    gap: 3px;
+}
+
+.navbar__logo img {
+    height: 45px;
+}
+
+/* Navigation links */
+.navbar__links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar__link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar__link:hover {
+    color: #ffcc00;
+}
+
+/* Main content expands */
+.main-content {
+    flex: 1;
+    padding: 40px 20px;
+}
+
+/* Footer at bottom */
+.footer {
+    background-color: #54273b;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.footer__text {
+    font-size: 14px;
+}
