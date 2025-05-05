@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{$title}}</title>
     <link rel="stylesheet" href="{{ asset('assets/css/nav.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="page-wrapper">
@@ -18,7 +19,7 @@
                     <a href="categories" class="navbar__link">Categories</a>
                     <a href="quiz" class="navbar__link">Quiz</a>
                     <a href="welcome" class="navbar__link">Welcome</a>
-                    <a href="#" class="navbar__link">Logout</a>
+                    <a href="admin-logout" class="navbar__link">Logout</a>
                 </div>
             </nav>
         </header>
