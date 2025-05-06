@@ -39,10 +39,10 @@
                         <p>
                             Total Quiz: {{$total_mcq}}
                             @if ($total_mcq > 0)
-                                <a href="show-quiz/{{session('QuizDetails')->id}}">View Quiz list</a>
+                                <a href="{{ url('show-quiz/' . session('QuizDetails')->id . '/' . session('QuizDetails')->name) }}">View Quiz list</a>
                             @endif
                         </p>
-                    </div>
+                    </div>                    
                     <form action="add-mcqs" method="POST" class="mcq-form">
                         @csrf
                         <div class="form-group">

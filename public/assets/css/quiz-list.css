@@ -1,0 +1,67 @@
+/* assets/css/quiz-list.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 20px;
+}
+
+.table-container {
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.table-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.table-container a {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.table {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+thead.th-theme {
+    background-color: #007bff;
+    color: white;
+}
+
+tbody.td-theme tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody.td-theme tr:hover {
+    background-color: #e6f0ff;
+}
+
+.fa-eye {
+    color: #007bff;
+    font-size: 18px;
+}
+
+.fa-eye:hover {
+    color: #0056b3;
+}

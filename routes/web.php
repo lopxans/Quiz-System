@@ -15,12 +15,13 @@ Route::controller(AdminController::class)->group(function(){
     Route::get('categories', 'categories');
     Route::post('add-category', 'AddCategory');
     Route::get('category/delete/{id}', 'deleteCategory');
+    Route::get('quiz-list/{id}/{Category}', 'quizList');
 
     // quiz page
     Route::get('quiz', 'quiz');
     Route::post('add-mcqs', 'addMCQs');
     Route::get('end-quiz', 'endQuiz');
-    Route::get('show-quiz/{id}', 'showQuiz');
+    Route::get('show-quiz/{id}/{quizName}', 'showQuiz');
 
     // quiz page
     Route::get('welcome', 'welcome');

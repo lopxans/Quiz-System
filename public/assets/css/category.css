@@ -1,84 +1,103 @@
-/* category.css */
-
-/* Overall page */
-.category-page {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-}
-
-/* Container box */
-.category-container {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-/* Heading section */
-.heading {
-    margin-bottom: 20px;
-}
-
-.heading h2 {
+/* General Page Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
     margin: 0;
-    font-size: 24px;
+    padding: 0;
     color: #333;
 }
 
-/* Success message */
+.category-page {
+    padding: 40px;
+}
+
+.category-container {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.heading h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #007bff;
+    font-weight: 700;
+}
+
 .success-message {
-    color: #2e7d32;
-    background: #e8f5e9;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 15px;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: center;
     font-weight: bold;
 }
 
-/* Input field */
+/* Form Styling */
+form {
+    margin-bottom: 30px;
+}
+
 .input-wrapper {
-    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;  /* Make sure the label and input stack vertically */
+    margin-bottom: 20px;
 }
 
 .input-wrapper label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    font-weight: 600;
+    margin-bottom: 8px; /* Space between label and input */
+    color: #555;
+    font-size: 16px;
 }
 
 .input-wrapper input {
-    width: 100%;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;  /* Full width of the container */
+    box-sizing: border-box;
+    transition: border 0.3s ease-in-out;
+}
+
+.input-wrapper input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.input-wrapper button {
+    padding: 8px 15px;  /* Smaller padding for a more compact button */
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 14px;  /* Smaller button text */
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;  /* Button takes full width of the container */
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;  /* Add spacing between input and button */
+}
+
+.input-wrapper button:hover {
+    background-color: #0056b3;
 }
 
 .error-message {
     color: red;
-    margin-top: 5px;
     font-size: 14px;
+    margin-top: 8px;
 }
 
-/* Submit button */
-.form-btn {
-    margin-top: 10px;
-}
-
-.form-btn button {
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.form-btn button:hover {
-    background-color: #2980b9;
-}
-
-/* Category list styling */
+/* Table/List Styling */
 .category-list {
     margin-top: 30px;
 }
@@ -86,22 +105,58 @@
 .category-header,
 .category-row {
     display: flex;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
 }
 
 .category-header {
+    background-color: #007bff;
+    color: white;
     font-weight: bold;
-    background: #f0f0f0;
+    font-size: 16px;
 }
 
-.col-id, .col-name, .col-creater, .col-action {
+.category-row {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+    font-size: 15px;
+}
+
+.category-row:hover {
+    background-color: #f1f1f1;
+}
+
+.col-id,
+.col-name,
+.col-creater,
+.col-action {
     flex: 1;
-    padding: 0 10px;
+    text-align: center;
+}
+
+.col-name {
+    flex: 2;
 }
 
 .col-action a {
-    color: red;
-    font-size: 18px;
     text-decoration: none;
+    color: #333;
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.col-action i {
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.col-action i:hover {
+    color: #007bff;
+}
+
+.col-action i:first-child {
+    margin-right: 10px;
 }

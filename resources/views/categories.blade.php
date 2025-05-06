@@ -17,16 +17,13 @@
                     @csrf
                     <div class="input-wrapper">
                         <label for="category-name">Add Category</label>
-                        <input type="text" id="category-name" name="category" placeholder="Enter category name">
                         <div class="error-message">
                             @error('category')
                                 {{ $message }}
                             @enderror
                         </div>
-                    </div>
-
-                    <div class="form-btn">
-                        <button type="submit">Add Category</button>
+                        <input type="text" id="category-name" name="category" placeholder="Enter category name">
+                        <button type="submit">Add Category</button>                     
                     </div>
                 </form>
 
@@ -43,7 +40,7 @@
                             <li class="col-id">{{ $category->id }}</li>
                             <li class="col-name">{{ $category->name }}</li>
                             <li class="col-creater">{{ $category->creater }}</li>
-                            <li class="col-action"><a href="category/delete/{{$category->id}}"><i class="fa-solid fa-trash"></i></a></li>
+                            <li class="col-action"><a href="category/delete/{{$category->id}}"><i class="fa-solid fa-trash"></i></a> <a href="quiz-list/{{ $category->id }}/{{ $category->name }}"><i class="fa-solid fa-eye"></i></a></li>
                         </ul>
                     @endforeach
                 </div>

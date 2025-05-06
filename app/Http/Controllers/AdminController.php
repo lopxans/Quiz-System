@@ -117,7 +117,7 @@ class AdminController extends Controller
             if($quiz){
                 $total_mcq = MCQs::where('quiz_id', $quiz->id)->count();
             }
-            
+
             return view('quiz', [
                 "name" => $admin->name, 
                 "categories" => $categories,
@@ -162,16 +162,25 @@ class AdminController extends Controller
         Session::forget('QuizDetails');
         return redirect('quiz');
     }
-    public function showQuiz($id){
+    public function showQuiz($id, $quizName){
         $admin = Session::get('admin');
         $mcqs = MCQs::where('quiz_id', $id)->get();
         if($admin){
-            return view('show-quiz', ["name" => $admin->name, "mcqs"=>$mcqs]); 
+            return view('show-quiz', ["name" => $admin->name, "mcqs"=>$mcqs, "quizName"=>$quizName]); 
         } else {
             return redirect('/');
         }   
     }
 
+    public function quizList($id, $category){
+        $admin = Session::get('admin');
+        $quizData = Quiz::where('category_id', $id)->get();
+        if($admin){
+            return view('quiz-list', ["name" => $admin->name, "quizData"=>$quizData, "category"=>$category]); 
+        } else {
+            return redirect('/');
+        }
+    }
 
     // Admin logout
     public function logout(){
