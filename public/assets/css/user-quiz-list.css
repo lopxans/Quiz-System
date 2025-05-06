@@ -1,0 +1,108 @@
+/* Table Container */
+.table-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 85, 0.3);
+}
+
+/* Table Heading */
+.table-container h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #ff0055;
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 10px rgba(255, 0, 85, 0.7); /* Glow effect */
+}
+
+/* Table Styling */
+.table table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Table Header Styling */
+.th-theme th {
+    background: linear-gradient(90deg, #ff0055, #3300ff);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 2px solid #444;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0px 4px 8px rgba(255, 0, 85, 0.5);
+}
+
+/* Table Data Row Styling */
+.td-theme td {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 14px;
+}
+
+/* Hover Effect on Table Row */
+.td-theme tr:hover {
+    background-color: #222;
+    transform: scale(1.02);
+}
+
+/* Gaming Button Styling */
+/* Table Data Row Styling - Reduced Size */
+.td-theme td {
+    padding: 8px; /* Reduced padding to make cells smaller */
+    border-bottom: 1px solid #333;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 14px;
+}
+
+/* Alternate Colors for Each Row */
+.td-theme tr:nth-child(odd) td {
+    background-color: #2a2a2a; /* Darker background for odd rows */
+}
+
+.td-theme tr:nth-child(even) td {
+    background-color: #333333; /* Lighter background for even rows */
+}
+
+/* Hover Effect on Table Row */
+.td-theme tr:hover {
+    background-color: #444444; /* Hover effect */
+    transform: scale(1.02);
+}
+
+/* Gaming Button Styling */
+.td-theme td a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #3300ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 10px rgba(51, 0, 255, 0.5);
+}
+
+/* Hover Effect for Gaming Button */
+.td-theme td a:hover {
+    background-color: #ffffff;
+    color: #3300ff;
+    border-color: #ff0055;
+    box-shadow: 0px 0px 15px #fff, 0px 0px 25px #ff0055;
+    transform: scale(1.05);
+}
+
+.td-theme td a:active {
+    background-color: #ff0055;
+    color: #fff;
+    box-shadow: 0px 0px 10px #ff0055, 0px 0px 20px #3300ff;
+}
+

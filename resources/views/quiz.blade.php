@@ -98,7 +98,7 @@
                                 <option value="d">D</option>
                             </select>
                         </div>
-
+                        
                         <div class="form-actions">
                             <button type="submit" name="action" value="add_more" class="btn btn-secondary">Add More</button>
                             <button type="submit" name="submit" value="submit_all" class="btn btn-success">Add and Submit</button>

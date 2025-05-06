@@ -1,9 +1,10 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+Route::get('admin-login', function () {
     return view('admin.login');
 });
 
@@ -23,8 +24,10 @@ Route::controller(AdminController::class)->group(function(){
     Route::get('end-quiz', 'endQuiz');
     Route::get('show-quiz/{id}/{quizName}', 'showQuiz');
 
-    // quiz page
-    Route::get('welcome', 'welcome');
-
     Route::get('admin-logout', 'logout');
+});
+
+Route::controller(UserController::class)->group(function(){
+    Route::get('/', 'welcome');
+    Route::get('user-quiz-list/{id}/{Category}', 'userQuizList');
 });

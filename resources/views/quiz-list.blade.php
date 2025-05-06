@@ -6,30 +6,30 @@
     <title>Quiz List</title>
 </head>
 <body>
-        <div class="table-container">
-            <h2>Quiz List</h2>
-            <a href="{{ url('categories') }}">Back</a>
-            <div class="table">
-                <table>
-                    <thead class="th-theme">
+    <div class="table-container">
+        <h2>Quiz List</h2>
+        <a href="{{ url('categories') }}">Back</a>
+        <div class="table">
+            <table>
+                <thead class="th-theme">
+                    <tr>
+                        <th>Quiz Id</th>
+                        <th>Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody class="td-theme">
+                    @foreach ($quizData as $item)
                         <tr>
-                            <th>MCQ Id</th>
-                            <th>Name</th>
-                            <th>Action</th>
+                            <td>{{ $item->id }}</td>
+                            <td>{{ $item->name }}</td>
+                            <td><a href="/show-quiz/{{ $item->id }}/{{ $item->name }}"><i class="fa-solid fa-eye"></i></a></td>
                         </tr>
-                    </thead>
-                    <tbody class="td-theme">
-                        @foreach ($quizData as $item)
-                            <tr>
-                                <td>{{ $item->id }}</td>
-                                <td>{{ $item->name }}</td>
-                                <td><a href="/show-quiz/{{ $item->id }}/{{ $item->name }}"><i class="fa-solid fa-eye"></i></a></td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
+    </div>
 </body>
 </html>
 
