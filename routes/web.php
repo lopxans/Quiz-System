@@ -20,7 +20,7 @@ Route::controller(AdminController::class)->group(function(){
     Route::get('quiz', 'quiz');
     Route::post('add-mcqs', 'addMCQs');
     Route::get('end-quiz', 'endQuiz');
-    Route::get('list-quiz/{id}', 'listQuiz');
+    Route::get('show-quiz/{id}', 'showQuiz');
 
     // quiz page
     Route::get('welcome', 'welcome');

@@ -35,11 +35,11 @@
                     <div class="quiz-info">
                         <h4 class="section-title">Add MCQs</h4>
                     </div>
-                    <div>
+                    <div class="show-quiz">
                         <p>
                             Total Quiz: {{$total_mcq}}
                             @if ($total_mcq > 0)
-                                <a href="list-quiz/{{session('QuizDetails')->id}}">View Quiz list</a>
+                                <a href="show-quiz/{{session('QuizDetails')->id}}">View Quiz list</a>
                             @endif
                         </p>
                     </div>
@@ -101,8 +101,8 @@
 
                         <div class="form-actions">
                             <button type="submit" name="action" value="add_more" class="btn btn-secondary">Add More</button>
-                            <a href="end-quiz">leave</a>
                             <button type="submit" name="submit" value="submit_all" class="btn btn-success">Add and Submit</button>
+                            <a href="end-quiz">leave</a>
                         </div>
                     </form>
                 @endif

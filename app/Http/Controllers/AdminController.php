@@ -92,22 +92,32 @@ class AdminController extends Controller
     public function quiz(){
         $admin = Session::get('admin');
         $categories = Category::get();
+        $total_mcq = 0;
+
+        // Create quiz if inputs are given and no session exists
         if($admin){
-            $total_mcq = 0;
             $quizName = request('quiz');
             $category_id = request('category_id');
+
             if($quizName && $category_id && !Session::has('QuizDetails')){
                 $quiz = new Quiz();
                 $quiz->name = $quizName;
                 $quiz->category_id = $category_id;
+
                 if($quiz->save()){
                     Session::put('QuizDetails', $quiz);
+                }else {
+                    // Redirect back if saving fails (optional)
+                    return redirect()->back()->with('error', 'Quiz could not be created.');
                 }
             }
-            else{
-                $quiz = Session::get('QuizDetails');
+            // Always get quiz form session here
+            $quiz = Session::get('QuizDetails');
+
+            if($quiz){
                 $total_mcq = MCQs::where('quiz_id', $quiz->id)->count();
             }
+            
             return view('quiz', [
                 "name" => $admin->name, 
                 "categories" => $categories,
@@ -152,7 +162,7 @@ class AdminController extends Controller
         Session::forget('QuizDetails');
         return redirect('quiz');
     }
-    public function listQuiz($id){
+    public function showQuiz($id){
         $admin = Session::get('admin');
         $mcqs = MCQs::where('quiz_id', $id)->get();
         if($admin){
@@ -162,15 +172,6 @@ class AdminController extends Controller
         }   
     }
 
-    // Show welcome page
-    public function welcome(){
-        $admin = Session::get('admin');
-        if($admin){
-            return view('welcome', ["name" => $admin->name]); 
-        } else {
-            return redirect('/');
-        }      
-    }
 
     // Admin logout
     public function logout(){
