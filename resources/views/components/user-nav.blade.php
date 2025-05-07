@@ -17,13 +17,17 @@
                 <div class="navbar__links">
                     <a href="/" class="navbar__link">Home</a>
                     <a href="#" class="navbar__link">Categories</a>
-                    <a href="#" class="navbar__link">Login</a>
+                    @if (session('user'))
+                        <a href="#" class="navbar__link">Welcome, {{session('user')->name}}</a>
+                        <a href="/user-logout" class="navbar__link">Logout</a>
+                    @else
+                        <a href="#" class="navbar__link">Login</a>
+                        <a href="user-signup" class="navbar__link">Sign Up</a>
+                    @endif
                     <a href="#" class="navbar__link">Blog</a>
-                    <a href="#" class="navbar__link">Logout</a>
                 </div>
             </nav>
         </header>
-
         <main class="main-content">
             {{$main}}
         </main>

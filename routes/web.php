@@ -27,7 +27,13 @@ Route::controller(AdminController::class)->group(function(){
     Route::get('admin-logout', 'logout');
 });
 
+
+Route::view('user-signup', 'user-signup');
 Route::controller(UserController::class)->group(function(){
     Route::get('/', 'welcome');
     Route::get('user-quiz-list/{id}/{Category}', 'userQuizList');
+    Route::get('start-quiz/{id}/{name}', 'startQuiz');
+    Route::post('user-signup', 'userSignup');
+    Route::get('user-logout', 'userLogout');
+    Route::get('user-signup-quiz', 'userSignupQuiz');
 });

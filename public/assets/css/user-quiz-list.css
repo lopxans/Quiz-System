@@ -30,7 +30,7 @@
     background: linear-gradient(90deg, #ff0055, #3300ff);
     color: white;
     padding: 15px;
-    text-align: left;
+    text-align: center; /* Center text in table headers */
     font-size: 16px;
     border-bottom: 2px solid #444;
     text-transform: uppercase;
@@ -40,22 +40,8 @@
 
 /* Table Data Row Styling */
 .td-theme td {
-    padding: 12px;
-    border-bottom: 1px solid #333;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    font-size: 14px;
-}
-
-/* Hover Effect on Table Row */
-.td-theme tr:hover {
-    background-color: #222;
-    transform: scale(1.02);
-}
-
-/* Gaming Button Styling */
-/* Table Data Row Styling - Reduced Size */
-.td-theme td {
-    padding: 8px; /* Reduced padding to make cells smaller */
+    padding: 8px;
+    text-align: center; /* Center text in table cells */
     border-bottom: 1px solid #333;
     transition: background-color 0.3s ease, transform 0.2s ease;
     font-size: 14px;
@@ -105,4 +91,3 @@
     color: #fff;
     box-shadow: 0px 0px 10px #ff0055, 0px 0px 20px #3300ff;
 }
-

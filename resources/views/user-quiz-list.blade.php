@@ -8,8 +8,9 @@
                 <table>
                     <thead class="th-theme">
                         <tr>
-                            <th>MCQ Id</th>
+                            <th>Quiz Id</th>
                             <th>Name</th>
+                            <th>Number of MCQs</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -18,8 +19,9 @@
                             <tr>
                                 <td>{{ $item->id }}</td>
                                 <td>{{ $item->name }}</td>
+                                <td>{{ $item->mcq_count }}</td>
                                 <td>
-                                    <a href="/show-quiz/{{ $item->id }}/{{ $item->name }}">Attempt Quiz</a>
+                                    <a href="/start-quiz/{{ $item->id }}/{{ $item->name }}">Attempt Quiz</a>
                                 </td>
                             </tr>
                         @endforeach
